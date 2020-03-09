@@ -1,0 +1,70 @@
+﻿<Window x:Class="TextRedactor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextRedactor"
+        mc:Ignorable="d"
+        Title="Bamboo Editor" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/img/bg/1.jpg" Stretch="UniformToFill">
+            </ImageBrush>
+        </Grid.Background>
+        <Menu HorizontalAlignment="Left" VerticalAlignment="Top"  >
+            <MenuItem Header="File">
+                <MenuItem Header ="New" Click="FileNew_Click"></MenuItem>
+                <MenuItem Header ="Open" Click="FileOpen_Click"></MenuItem>
+                <MenuItem Header ="Save" Click="FileSave_Click"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Text">
+                <MenuItem Header="Copy" Click="TextCopy_Click"></MenuItem>
+                <MenuItem Header="Insert" Click="TextInsert_Click"></MenuItem>
+                <MenuItem Header="Cut" Click="TextCut_Click"></MenuItem>
+                <MenuItem Header="Change Text Color" Click="TextColor_Click"></MenuItem>
+                <MenuItem Header="Change Font Weight" Click="TextFontWeight_Click" ></MenuItem>
+                <MenuItem Header="Change Font Size" Click="TextFontSize_Click" ></MenuItem>
+            </MenuItem>
+
+        </Menu>
+        <RichTextBox x:Name="ContentBox" HorizontalAlignment="Left" Height="246" VerticalAlignment="Top" Width="589" Margin="86,97,0,0">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text=""/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ToolBar HorizontalAlignment="Left" Height="35" VerticalAlignment="Top" Width="334" Margin="0,17,0,0">
+            <ToggleButton Click="FileNew_Click">
+                <Image Source="img\new_file.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="FileOpen_Click">
+                <Image Source="img\open_file.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="FileSave_Click" >
+                <Image Source="img\save_file.jpg"/>
+            </ToggleButton>
+            <Separator/>
+            <ToggleButton Click="TextCopy_Click">
+                <Image Source="img\text_copy.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="TextCut_Click">
+                <Image Source="img\text_cut.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="TextInsert_Click">
+                <Image Source="img\text_insert.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="TextColor_Click">
+                <Image Source="img\text_color.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="TextFontSize_Click">
+                <Image Source="img\text_font_size.jpg"/>
+            </ToggleButton>
+            <ToggleButton Click="TextFontWeight_Click">
+                <Image Source="img\text_font_type.jpg"/>
+            </ToggleButton>
+        </ToolBar>
+
+
+    </Grid>
+</Window>
